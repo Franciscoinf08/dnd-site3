@@ -1,0 +1,1515 @@
+@font-face {
+    font-family: 'medieval times';
+    src: url(Fontes/MedievalTimes-AL7l6.ttf) format('truetype');
+    font-family: 'gothic';
+    src: url(Fontes/GothichaRegular-d9BjV.ttf) format('truetype');
+    font-family: 'fire';
+    src: url(Fontes/BreatheFire-65pg.ttf) format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap');
+
+
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #202020;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #353535;
+}
+
+
+
+h2 {
+    text-align: left;
+    font-size: 30px;
+    color: #aa0404;
+    font-family: 'Baskervville SC';
+}
+
+p {
+    margin: 0 20% 0 20%;
+    font-family: 'Baskervville SC';
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+
+a {
+    font-family: 'Baskervville SC';
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+
+}
+
+.title,
+.title-center {
+    margin: 0 0 50px 0;
+    font-size: 50px;
+    color: #aa0404;
+    font-family: 'Macondo', cursive;
+    font-weight: 1200;
+}
+
+.title-center {
+    text-align: center;
+
+
+}
+
+.title {
+    margin-left: 10%;
+}
+
+img:active {
+    transform: scale(1.025);
+    transition: 0.5s;
+}
+
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+/*GERAL*/
+
+/*MENU*/
+/*MENU*/
+/*MENU*/
+/*MENU*/
+.interface {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+header a,
+button {
+    font-family: 'Macondo', cursive;
+}
+
+header .logo img {
+    max-width: 50px;
+    height: auto;
+}
+
+header {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #333333;
+
+}
+
+header .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menudesktop nav ul {
+    list-style-type: none;
+}
+
+header .menudesktop nav ul li {
+    display: inline-block;
+    margin: 0 40px;
+    /* font-size: 20px; */
+}
+
+header .menudesktop nav ul li a {
+    color: #fcffe5;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+header .ficha button {
+    width: 176px;
+    height: 61px;
+    background-color: transparent;
+    color: #fcffe5;
+    cursor: pointer;
+    font-size: 20px;
+    background-image: url(imgs/Button.png);
+    background-position: center;
+    background-size: 170px;
+    font-family: 'fire';
+}
+
+
+
+header .ficha button:active {
+    opacity: 0.5;
+}
+
+header .menudesktop nav ul li a:hover {
+    transform: scale(1.35);
+    color: #aa0404;
+}
+
+/*MENU*/
+/*MENU*/
+/*MENU*/
+/*MENU*/
+.response-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+@media (max-width: 900px) {
+    ul {
+        position: absolute;
+        top: 88.54px;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color: #333333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border: solid 4px #aa0404;
+        border-style: groove;
+        transform: translateX(100%);
+    }
+
+    .response-icon {
+        display: flex;
+    }
+}
+
+
+
+/*INICIO*/
+/*INICIO*/
+/*INICIO*/
+/*INICIO*/
+/*INICIO*/
+/*INICIO*/
+.body-inicio {
+    background-image: url(imgs/dnd-dragon-and-elf-battle-t66md29epns98cjg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Seçao-inicio {
+    display: block;
+    background-color: #fcffe5;
+    border: solid 5px #aa0404;
+    border-style: groove;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.Seçao-inicio img {
+    float: right;
+    width: 500px;
+    border: solid #aa0404 5px;
+    border-style: groove;
+    border-radius: 5px;
+    margin: 0 5%;
+}
+
+.txt-inicio {
+    color: #000;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 50%;
+    font-family: 'Baskervville SC';
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.video{
+    margin: 2.5% 0 5% 10%;
+    border-radius: 0;
+}
+
+.txt-meio {
+    color: #ffffff;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 50%;
+    font-family: 'Baskervville SC';
+    font-weight: bold;
+}
+
+.Seçao-meio {
+    padding: 100px 0;
+    align-items: center;
+    display: flex;
+    background-image: url(imgs/background-inicio-howtoplay.avif);
+    background-size: cover;
+    border: solid 40px rgb(170, 4, 4);
+    border-style: groove;
+}
+
+@media (max-width: 900px){
+    .Seçao-inicio{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .Seçao-inicio p, .Seçao-inicio h1{
+        margin: 5%;
+        text-align: center;
+    }
+
+    .Seçao-inicio img{
+        width: 300px;
+        margin: 0 auto;
+        float: none;
+        text-align: center;
+    }
+    
+    .txt-meio {
+        text-align: center;
+        margin: 5%;
+    }
+
+    .Seçao-meio {
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .video{
+        width: 295px;
+        height: 165px;
+        margin: 0 auto;
+    }
+
+}
+/*INICIO*/
+/*INICIO*/
+/*INICIO*/
+/*INICIO*/
+/*INICIO*/
+/*INICIO*/
+
+/*DADOS*/
+/*DADOS*/
+/*DADOS*/
+/*DADOS*/
+/*DADOS*/
+/*DADOS*/
+.body-dados {
+    background-image: url(imgs/Anime\ Original.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Seçao-dados {
+    background-image: url(imgs/dados4.png);
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    border: solid 5px #aa0404;
+    background-color: #fcffe5;
+    border-style: groove;
+}
+
+.section-dado-meio>img {
+    width: 500px;
+    margin: 5% 0 5% 0;
+}
+
+.section-dado-meio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Dadostxtimg {
+    align-items: center;
+    display: flex;
+    background-color: rgb(0, 0, 0, 0.5);
+    border: 4px solid rgb(170, 4, 4);
+    border-style: groove;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 75px;
+    margin: 0 15% 5% 15%;
+    box-shadow:
+        inset 20px 20px 20px rgb(170, 4, 4, 0.2),
+        inset -20px -20px 20px rgb(170, 4, 4, 0.2)
+}
+
+.Dadostxtimg>img {
+    width: 150px;
+    margin-bottom: 25px;
+    filter: drop-shadow(0px 0px 20px rgb(161, 210, 173));
+}
+
+.Seçao-dados p {
+    color: #000;
+    text-align: left;
+    font-family: 'Baskervville SC';
+    font-weight: bold;
+    margin: 0 50% 0 10%;
+}
+
+@media (max-width: 900px) {
+
+    .Seçao-dados p {
+        max-height: 400px;
+        overflow: auto;
+        text-align: center;
+        margin: 0 15%;
+    }
+
+    .Seçao-dados h1 {
+        margin: 0 0 10% 0;
+        text-align: center;
+    }
+
+    .Dadostxtimg p {
+        max-height: 250px;
+        overflow: auto;
+        margin: 0 5% 5% 5%;
+    }
+
+    .Dadostxtimg {
+        margin: 0 5% 10% 5%;
+    }
+
+    .section-dado-meio>img {
+        width: 250px;
+        margin: 5% 0 5% 0;
+    }
+
+    .Seçao-dados {
+        background-image: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/*DADOS*/
+/*DADOS*/
+/*DADOS*/
+/*DADOS*/
+/*DADOS*/
+/*DADOS*/
+
+/*CLASSES*/
+/*CLASSES*/
+/*CLASSES*/
+/*CLASSES*/
+/*CLASSES*/
+.body-classes {
+    background-image: url(imgs/Img2borrada.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Seçao-classe {
+    display: block;
+    background-color: #fcffe5;
+    border: solid 5px #aa0404;
+    border-style: groove;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.Seçao-classe p {
+    color: #000;
+    text-align: left;
+    margin: 0 50% 0 10%;
+    font-family: 'Baskervville SC';
+    font-weight: bold;
+}
+
+.Classestxtimg img {
+    width: 300px;
+    margin: 50px 0 50px 50px;
+    filter: drop-shadow(0px 0px 20px rgb(161, 210, 173));
+}
+
+.Classestxtimg {
+    margin: 5%;
+    background-color: rgb(0, 0, 0, 0.5);
+    border: 4px solid rgb(170, 4, 4);
+    border-style: groove;
+    display: flex;
+    align-items: center;
+    box-shadow:
+        inset 20px 20px 20px rgb(170, 4, 4, 0.2),
+        inset -20px -20px 20px rgb(170, 4, 4, 0.2)
+}
+
+.Classestxtimg h2 {
+    margin: 0 50% 0 20%;
+}
+
+.Seçao-classe img {
+    width: 500px;
+    border: 4px solid rgb(170, 4, 4);
+    float: right;
+    margin: 0 5%;
+}
+
+
+
+@media (max-width: 900px) {
+    .Classestxtimg {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Classestxtimg img {
+        width: 200px;
+    }
+
+    .Classestxtimg p {
+        margin-bottom: 10%;
+        max-height: 350px;
+        overflow: auto;
+    }
+
+    .Seçao-classe {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .Seçao-classe img {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .Seçao-classe p {
+        text-align: center;
+        margin: 2.5% 5% 2.5% 5%;
+    }
+
+    .Seçao-classe h1 {
+        text-align: center;
+        margin: 2.5% 5% 2.5% 5%;
+    }
+
+
+
+}
+
+/*CLASSES*/
+/*CLASSES*/
+/*CLASSES*/
+/*CLASSES*/
+/*CLASSES*/
+
+/*RAÇAS*/
+/*RAÇAS*/
+/*RAÇAS*/
+/*RAÇAS*/
+/*RAÇAS*/
+/*RAÇAS*/
+.body-raças {
+    background-image: url(imgs/Dorado3.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.txt-raças {
+    color: #000;
+    font-family: 'Baskervville SC';
+    font-weight: bold;
+    text-align: center;
+}
+
+.Img-seçao-raças {
+    width: 500px;
+    border: 4px solid rgb(170, 4, 4);
+    margin-top: 50px;
+}
+
+.Seçao-raças {
+    background-color: #fcffe5;
+    background-size: cover;
+    color: #ffffff;
+    padding: 100px 0;
+    border: solid 5px rgb(170, 4, 4);
+    border-style: groove;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Raçastxtimg {
+    margin: 5%;
+    align-items: center;
+    display: flex;
+    background-color: rgb(0, 0, 0, 0.5);
+    border: 4px solid rgb(170, 4, 4);
+    border-style: groove;
+    box-shadow:
+        inset 20px 20px 20px rgb(170, 4, 4, 0.2),
+        inset -20px -20px 20px rgb(170, 4, 4, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Raçastxtimg p {
+    margin: 0 20% 5% 20%;
+}
+
+.Raçastxtimg h2 {
+    margin-top: 5%;
+    margin-left: 20%;
+}
+
+.Raçastxtimg>img {
+    width: 300px;
+    margin: 50px 0 50px 50px;
+    filter: drop-shadow(0px 0px 20px rgb(223, 223, 102));
+}
+
+
+
+@media(max-width: 900px) {
+
+    .Raçastxtimg {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Raçastxtimg img {
+        width: 200px;
+    }
+
+    .Raçastxtimg div {
+        max-height: 400px;
+        overflow: auto;
+        margin: 5% 2.5%;
+    }
+
+    .Seçao-raças img {
+        width: 400px;
+    }
+}
+
+/*RAÇAS*/
+/*RAÇAS*/
+/*RAÇAS*/
+/*RAÇAS*/
+/*RAÇAS*/
+/*RAÇAS*/
+
+/*LENDAS*/
+/*LENDAS*/
+/*LENDAS*/
+/*LENDAS*/
+
+.Seçao-kallista {
+    display: flex;
+    height: 500px;
+    background-size: 2000px;
+    background-repeat: no-repeat;
+    background-image: url(imgs/Kalistal.png);
+    background-position: center;
+}
+
+.Seçao-lendas {
+    background-size: cover;
+    padding: 100px 0;
+    border: solid 5px #aa0404;
+    border-style: groove;
+    background-color: #fcffe5;
+}
+
+.txt-lendas {
+    color: #000;
+    font-family: 'Baskervville SC';
+    font-weight: bold;
+    text-align: center;
+}
+
+.body-lendas {
+    background-image: url(imgs/lendasfundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.marmor {
+    background-image: url(imgs/marmore.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 25px;
+}
+
+.display-lendas-1 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    height: 150vh;
+    width: 100vw;
+    background-image: url(imgs/marmorepreto.avif);
+    justify-items: center;
+    align-items: center;
+
+}
+
+.txt-item {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    max-height: 400px;
+    overflow: auto;
+    margin: 0;
+}
+
+.txt-item p,
+h2 {
+    margin: 5%;
+}
+
+.item-kalista .img {
+    background-image: url(imgs/Kallista.png);
+    background-position: center;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    border: #aa0404 solid 5px;
+    border-style: groove;
+}
+
+
+.item-kalista {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 90%;
+    height: 90%;
+    border: 5px #aa0404 solid;
+    border-style: groove;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.item-roberto {
+    background-color: rgb(26, 26, 117);
+    width: 90%;
+    height: 90%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border: 5px #aa0404 solid;
+    border-style: groove;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.item-roberto .img {
+    background-image: url(imgs/Roberto.jpeg);
+    background-position: center;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    border: #aa0404 solid 5px;
+    border-style: groove;
+}
+
+.item-aust {
+    background-color: rgb(155, 0, 0);
+    width: 90%;
+    height: 90%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: 5px #aa0404 solid;
+    border-style: groove;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.item-aust .img {
+    background-image: url(imgs/Aust.jpg);
+    background-position: center;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    border: #aa0404 solid 5px;
+    border-style: groove;
+}
+
+.item-reinaldo {
+    background-color: #620b64;
+    width: 90%;
+    height: 90%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: 5px #aa0404 solid;
+    border-style: groove;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.item-reinaldo .img {
+    background-image: url(imgs/Reinildo.jpg);
+    background-position: center;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    border: #aa0404 solid 5px;
+    border-style: groove;
+}
+
+.item-kvothe {
+    background-color: rgb(16, 119, 134);
+    width: 90%;
+    height: 90%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border: 5px #aa0404 solid;
+    border-style: groove;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.item-kvothe .img {
+    background-image: url(imgs/kvothe.webp);
+    background-position: center;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    border: #aa0404 solid 5px;
+    border-style: groove;
+}
+
+
+.item-alguem {
+    background-color: #517905;
+    width: 90%;
+    height: 90%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border: 5px #aa0404 solid;
+    border-style: groove;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.display-lendas-1 img {
+    width: 370px;
+}
+
+@media (max-width: 900px){
+    .display-lendas-1 {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+        height: 150vh;
+        width: 100vw;
+        background-image: url(imgs/marmorepreto.avif);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .item-kalista{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .item-roberto{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .item-aust{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .item-reinaldo{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .item-kvothe{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    .item-alguem{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+
+    .item-alguem .img,
+    .item-kalista .img,
+    .item-aust .img,
+    .item-roberto .img,
+    .item-reinaldo .img,
+    .item-kvothe .img{
+        background-size: 110%;
+    }
+
+    .display-lendas-1 img {
+        width: 250px;
+    }
+}
+
+/*LENDAS*/
+/*LENDAS*/
+/*LENDAS*/
+/*LENDAS*/
+
+/*FICHA*/
+/*FICHA*/
+/*FICHA*/
+/*FICHA*/
+
+.title-ficha {
+    font-family: 'fire';
+    color: black;
+    text-align: center;
+    font-size: 100px;
+    padding: 200px;
+    cursor: pointer;
+}
+
+
+
+.moldura .title-ficha:active {
+    color: #aa0404;
+}
+
+.papiro {
+    background-image: url(imgs/Antiguo_marco_de_hoja_de_papel_medieval_Rollo_de_pergamino_aislado_en_blanco___Imagen_Premium_generada_con_IA-removebg-preview.png);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-size: 800px;
+}
+
+.papiro>.ficha-title {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.moldura {
+    display: block;
+    align-items: center;
+    background-color: #fcffe5;
+    border-radius: 15px;
+    padding: 50px;
+    text-align: center;
+    margin: 100px 100px;
+    border: rgb(155, 0, 0) solid 15px;
+    border-style: groove;
+
+
+}
+
+.moldura p {
+    color: rgb(0, 0, 0);
+    margin-bottom: 50px;
+    font-size: 25px;
+    font-family: 'Baskervville SC';
+    font-weight: bold;
+}
+
+#body-ficha {
+    background-image: url(imgs/war.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.geral-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.status {
+    background-image: url(imgs/tapete3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 597px;
+    height: 368px;
+    /* border: solid 10px #29251f;
+    border-style: groove; */
+    padding: 60px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 15% 15% 15% 10% 15% 15% 15%;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.status>div {
+    width: 198px;
+    height: 73px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-image: url(imgs/burrado.png);
+    background-position: center;
+    background-size: 198px 73px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 10px 0 10px;
+
+
+}
+
+.status>div:active {
+    opacity: 0.5;
+}
+
+.um {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.dois {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.tres {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.quatro {
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.cinco {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.seis {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.status a {
+    color: #fcffe5;
+    font-size: 18px;
+    font-family: 'gothic';
+    display: flex;
+    margin-bottom: 0;
+}
+
+.status div:hover {
+    cursor: pointer;
+}
+
+
+iframe {
+    border: solid 10px #aa0404;
+    border-radius: 15px;
+    border-style: groove;
+}
+
+.Barra {
+    background-color: #aa0404;
+    height: 5px;
+    margin: 80px 10%;
+    border-radius: 5px;
+}
+
+.text-esquerda {
+    text-align: left;
+    margin-left: 10%;
+
+}
+
+.moldura li {
+    list-style-type: none;
+    text-align: left;
+    font-family: 'Macondo', cursive;
+    color: #aa0404;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 5px 10%;
+}
+
+.moldura .video{
+    margin: 0;
+}
+
+@media (max-width: 900px){
+    .moldura {
+        margin: 2.5%;
+    }
+    .moldura p{
+        font-size: 20px;
+    }
+    .moldura .title-center{
+        font-size: 35px;
+    }
+    .status {
+        width: 294px;
+        height: 184px;
+        padding: 30px;
+    }
+    
+    .status>div {
+        width: 96px;
+        height: 36px;
+        background-size: 96px 36px;
+    }
+
+    .status a {
+        font-size: 9px;
+    }
+
+    iframe{
+        width: 300px;
+        height: 600px;
+        margin: 0 auto;
+    }
+
+    .title-ficha {
+        font-size: 50px;
+        padding: 150px;
+    }
+
+    .papiro>.ficha-title {
+        padding: 120px;
+    }
+
+    .papiro {
+        background-size: 300px;
+    }
+
+    .moldura .video{
+        margin: 0 auto;
+    }
+    
+}
+
+/*FICHA*/
+/*FICHA*/
+/*FICHA*/
+/*FICHA*/
+
+#voltar-topo {
+    background-color: #fcffe5;
+    border-radius: 20%;
+    border: 2px solid #aa0404;
+    font-size: 35px;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+}
+
+#voltar-topo:active {
+    opacity: 0.7;
+
+}
+
+/* Margin é no sentido horario */
+
+.search-box {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: #3d4859;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+    overflow: hidden;
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+    margin: 2% 0 0 10%;
+    border: 5px #aa0404 solid;
+    border-style: groove;
+
+}
+
+.search-box.active {
+    width: 360px;
+}
+
+.search-box .search {
+    position: relative;
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.search-box .close {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.search-box.active .close {
+    transform: scale(1);
+    transition-delay: 0.5s;
+}
+
+.search-box .search-input {
+    position: absolute;
+    left: 60px;
+    width: calc(100% - 120px);
+    height: 100%;
+    line-height: 60px;
+}
+
+.search-box .search-input input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 18px;
+    background-color: #3d4859;
+    border: none;
+    font-family: 'Baskervville SC';
+}
+
+.search-box button {
+    all: unset;
+    cursor: pointer;
+    color: #fcffe5;
+}
+
+input[type="text"]::placeholder {
+    color: #fcffe5;
+}
+
+input[type="text"] {
+    color: #fcffe5;
+}
+
+/*PERSONAGEM*/
+/*PERSONAGEM*/
+/*PERSONAGEM*/
+/*PERSONAGEM*/
+
+
+#body-ficha2 {
+    background-image: url(imgs/cena-de-fantasia-em-3d.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+
+}
+
+.geral {
+    display: grid;
+    grid-template-columns: 30vw 50vw 20vw;
+    grid-template-rows: 60vh 40vh;
+    align-items: flex-end;
+}
+
+
+
+.personagem {
+    background-color: #333333;
+    width: calc(30vw - 43.5px);
+    height: calc(20vw - 33.5px);
+    border: solid 10px #29251f;
+    border-style: groove;
+    padding: 12.5px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-items: center;
+    box-shadow:
+        inset 10px 10px 20px rgba(0, 0, 0, 0.2),
+        /* Sombra interna nos lados esquerdo e superior */
+        inset -10px -10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.personagem>div {
+    width: 178px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-image: url(imgs/burrado.png);
+    background-position: center;
+    background-size: 178px 60px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 10px 0 10px;
+
+
+}
+
+.personagem>div:active {
+
+    opacity: 0.5;
+}
+
+.personagem p,
+.personagem a {
+    color: #fcffe5;
+    font-size: 18px;
+    font-family: 'gothic';
+    display: flex;
+}
+
+.personagem div:hover {
+    cursor: pointer;
+}
+
+#body-ficha2 header {
+    display: none;
+}
+
+.imagem-personagem {
+    height: calc(60vh - 43.5px);
+    width: calc(30vw - 43.5px);
+    background-color: #333333;
+    background-image: url(imgs/cu2.png);
+    background-position: center;
+    background-size: cover;
+    border: solid 10px #29251f;
+    border-style: groove;
+    padding: 12.5px;
+    display: grid;
+    align-items: flex-start;
+    background-repeat: no-repeat;
+    box-shadow:
+        inset 20px 20px 20px rgba(0, 0, 0, 0.2),
+        inset -20px -20px 20px rgba(0, 0, 0, 0.2)
+}
+
+.geral .personalização {
+    align-items: center;
+    justify-content: space-around;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.personalização {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    transform: translateX(150%);
+    display: grid;
+    grid-template-rows: 33vh 33vh 33vh;
+    grid-template-columns: 16vw 16vw 16vw;
+    height: 100vh;
+    width: 50vw;
+    background-color: #333333;
+    justify-content: space-around;
+    align-items: center;
+    /* Alinha verticalmente o conteúdo no centro */
+    justify-items: center;
+    /* Alinha horizontalmente o conteúdo no centro */
+}
+
+.personalização>div {
+    width: 90%;
+    height: 90%;
+    background-color: #517905;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#raca div {
+    background-color: #aa0404;
+}
+
+#equipamento div {
+    background-color: #413509;
+}
+
+#aparencia div {
+    background-color: #620b64;
+}
+
+#armadura div {
+    background-color: #fcffe5;
+}
+
+.personalização {
+    transition: right 0.5s ease-in-out;
+}
+
+
+.personalização.active2 {
+    overflow-x: visible;
+    transform: translateX(0);
+}
+
+.personalização .detalhes {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: #333333;
+    width: 500px;
+}
+
+
+/*PERSONAGEM*/
+/*PERSONAGEM*/
+/*PERSONAGEM*/
+/*PERSONAGEM*/
+
+/*RESPONSIVO*/
+/*RESPONSIVO*/
+/*RESPONSIVO*/
+/*RESPONSIVO*/
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu svg {
+    height: 22px;
+    width: 32px;
+}
+
+
+@media (max-width: 900px) {
+
+    header .interface {
+        align-items: center;
+        justify-content: space-around;
+    }
+
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .lista-menu {
+        position: absolute;
+        top: 91px;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #333333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        border-top: 0;
+    }
+
+    .lista-menu li {
+        margin-left: 0;
+        opacity: 1;
+    }
+
+    .mobile-menu {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+.active {
+    transform: translateX(0);
+}
+
+
+
+
+/*RESPONSIVO*/
+/*RESPONSIVO*/
+/*RESPONSIVO*/
+/*RESPONSIVO*/
