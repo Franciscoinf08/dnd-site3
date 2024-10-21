@@ -34,7 +34,9 @@ body::-webkit-scrollbar-thumb {
     background-color: #353535;
 }
 
-
+body{
+    overflow-x: hidden;
+}
 
 h2 {
     text-align: left;
@@ -1117,24 +1119,24 @@ iframe {
         font-size: 35px;
     }
     .status {
-        width: 294px;
-        height: 184px;
-        padding: 30px;
+        width: 196px;
+        height: 123px;
+        padding: 20px;
     }
     
     .status>div {
-        width: 96px;
-        height: 36px;
-        background-size: 96px 36px;
+        width: 64px;
+        height: 24px;
+        background-size: 64px 24px;
     }
 
     .status a {
-        font-size: 9px;
+        font-size: 6px;
     }
 
     iframe{
-        width: 300px;
-        height: 600px;
+        width: 250px;
+        height: 550px;
         margin: 0 auto;
     }
 
