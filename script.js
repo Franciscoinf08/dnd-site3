@@ -1,7 +1,7 @@
-console.log(dadosDeJogo)
+// console.log(dadosDeJogo)
 
-let section = document.getElementById("Dadosbusca");
-console.log(section);
+// let section = document.getElementById("Dadosbusca");
+// console.log(section);
 
 
 
@@ -66,3 +66,28 @@ mobileMenu.addEventListener("click", () => {
 });
 
 
+let botaoClasse = document.querySelector("#classe");
+let sectionGeral = document.querySelector(".geral");
+
+botaoClasse.addEventListener("click", () => {
+    sectionGeral.innerHTML += `
+        <section class="personagem">
+            <div>
+                <p>CLASSE</p>
+            </div>
+            <div>
+                <p>RAÇA</p>
+            </div>
+            <div>
+                <p>APARENCIA</p>
+            </div>
+            <div>
+                <p>EQUIPAMENTO</p>
+            </div>
+            <div>
+                <p>ARMADURA</p>
+            </div>
+
+        </section>
+    `
+})
