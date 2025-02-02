@@ -38,16 +38,15 @@
 
 const personagens = document.querySelectorAll('.personagem > div');//seleciona todos os divs
 let janelaSelenada = null;//define como no inicio nao selecionado
-for(let personagem of personagens){
+for (let personagem of personagens) {
     personagem.addEventListener("click", (e) => {
         let botaoClicado = e.currentTarget;
         //console.log("Oioi: "+botaoClicado.dataset.janela); //pega o nome da janela
         let nomeJanela = botaoClicado.dataset.janela;
-        let janela = document.querySelector("#"+nomeJanela);
+        let janela = document.querySelector("#" + nomeJanela);
         janela.classList.add('active2')
         //esconder a antiga (se for != null)
-        if(janelaSelenada != null || janela == "aparencia")
-        {
+        if (janelaSelenada != null || janela == "aparencia") {
             janelaSelenada.classList.remove('active2')
         }
 
@@ -66,20 +65,87 @@ mobileMenu.addEventListener("click", () => {
 });
 
 
-let botaoClasse = document.querySelector("#classe");
+let elementos = document.querySelectorAll(".escolhas div");
+let vetorElementos = Array.from(elementos);
 let sectionGeral = document.querySelector(".geral");
 
-botaoClasse.addEventListener("click", () => {
+vetorElementos[0].addEventListener("click", () => {
     sectionGeral.innerHTML += `
         <section class="personagem">
             <div>
-                <p>CLASSE</p>
+                <p>BARBARO</p>
             </div>
             <div>
-                <p>RAÇA</p>
+                <p>BARDO</p>
             </div>
             <div>
-                <p>APARENCIA</p>
+                <p>LADINO</p>
+            </div>
+            <div>
+                <p>PALADINO</p>
+            </div>
+            <div>
+                <p>DRUIDA</p>
+            </div>
+
+        </section>
+    `
+})
+vetorElementos[1].addEventListener("click", () => {
+    sectionGeral.innerHTML += `
+        <section class="personagem">
+            <div>
+                <p>ELFO</p>
+            </div>
+            <div>
+                <p>TIELFLING</p>
+            </div>
+            <div>
+                <p>ANÃO</p>
+            </div>
+            <div>
+                <p>MEIO-ORC</p>
+            </div>
+            <div>
+                <p>DRACONATO</p>
+            </div>
+
+        </section>
+    `
+})
+vetorElementos[2].addEventListener("click", () => {
+    sectionGeral.innerHTML += `
+        <section class="personagem">
+            <div>
+                <p>CABELO</p>
+            </div>
+            <div>
+                <p>ROSTO</p>
+            </div>
+            <div>   
+                <p>ACESSORIOS</p>
+            </div>
+            <div>
+                <p>CAMISA</p>
+            </div>
+            <div>
+                <p>CALÇA</p>
+            </div>
+
+        </section>
+    `
+})
+vetorElementos[3].addEventListener("click", () => {
+    sectionGeral.innerHTML += `
+        <section class="personagem">
+            <div>
+                <p>ARMADURA</p>
+            </div>
+            <div>
+                <p>ARMAS</p>
+            </div>
+            <div>
+                <p></p>
             </div>
             <div>
                 <p>EQUIPAMENTO</p>
@@ -90,4 +156,53 @@ botaoClasse.addEventListener("click", () => {
 
         </section>
     `
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const categorias = {
+
+        classe: ["Guerreiro", "Mago", "Ladino", "Clérigo"],
+
+        raca: ["Humano", "Elfo", "Anão", "Orc"],
+
+        aparencia: ["Cabelos", "Olhos", "Pele", "Altura"],
+
+        equipamento: ["Espada", "Cajado", "Arco", "Escudo"],
+
+        armadura: ["Leve", "Média", "Pesada", "Mistica"]
+
+    };
+
+    const botoesPersonagem = document.querySelectorAll(".personagem > div");
+
+    const menuHorizontal = document.querySelector(".escolhas");
+    
+    botoesPersonagem.forEach(botao => {
+
+        botao.addEventListener("click", function () {
+
+            const categoria = this.id.toLowerCase(); // Usa o ID do botão como chave
+
+            if (categorias[categoria]) {
+
+                atualizarMenuHorizontal(categorias[categoria]);
+
+            }
+
+        });
+
+    });
+
+    function atualizarMenuHorizontal(opcoes) {
+
+        menuHorizontal.innerHTML = "";
+
+        opcoes.forEach(opcao => {
+
+            const div = document.createElement("div");
+
+            div.textContent - opcao;
+        })
+    }    
 })
