@@ -135,7 +135,7 @@ img:active {
         inset -10px -10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.personagem>div {
+.personagem div {
     width: 178px;
     height: 60px;
     display: flex;
@@ -152,7 +152,7 @@ img:active {
 
 }
 
-.personagem>div:active {
+.personagem div:active {
 
     opacity: 0.5;
 }
@@ -225,7 +225,7 @@ img:active {
     border-style: groove;
     justify-content: flex-end;
     display: grid;
-    grid-template-columns: 17.5vw 17.5vw 17.5vw 17.5vw;
+    grid-template-columns: 5vw 15vw 15vw 15vw 15vw 5vw;
     justify-items: center;
     align-items: center;
     box-shadow:
@@ -234,7 +234,7 @@ img:active {
         inset -10px -10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.escolhas > div{
+.escolhas div{
     width: 133.5px;
     height: 45px;
     display: flex;
@@ -246,64 +246,7 @@ img:active {
     background-size: 133.5px 45px;
     margin: 0 7.5px 0 7.5px;
 }
-/* .personalização {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    transform: translateX(150%);
-    display: grid;
-    grid-template-rows: 33vh 33vh 33vh;
-    grid-template-columns: 16vw 16vw 16vw;
-    height: 100vh;
-    width: 50vw;
-    background-color: #333333;
-    justify-content: space-around;
-    align-items: center;
-    justify-items: center;
-}
 
-.personalização>div {
-    width: 90%;
-    height: 90%;
-    background-color: #517905;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-/* 
-#raca div {
-    background-color: #aa0404;
+.personagem{
+    display: none;
 }
-
-#equipamento div {
-    background-color: #413509;
-}
-
-#aparencia div {
-    background-color: #620b64;
-}
-
-#armadura div {
-    background-color: #fcffe5;
-}
-
-.personalização {
-    transition: right 0.5s ease-in-out;
-}
-
-
-.personalização.active2 {
-    overflow-x: visible;
-    transform: translateX(0);
-}
-
-.personalização .detalhes {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    background-color: #333333;
-    width: 500px;
-}
- */

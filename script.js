@@ -55,108 +55,53 @@ for (let personagem of personagens) {
     });
 }
 
-//Hasan o codigo acima sera incluido na pagina ficha dois no tp2 por conta de falta de tempo
 
-const mobileMenu = document.querySelector(".mobile-menu");
-const navList = document.querySelector(".lista-menu");
+// const mobileMenu = document.querySelector(".mobile-menu");
+// const navList = document.querySelector(".lista-menu");
 
-mobileMenu.addEventListener("click", () => {
-    navList.classList.toggle("active");
+// mobileMenu.addEventListener("click", () => {
+//     navList.classList.toggle("active");
+// });
+
+let equipamento = document.querySelector("#equipamentoPersonalizacao");
+let aparencia = document.querySelector("#aparenciaPersonalizacao");
+let racas = document.querySelector("#racasPersonalizacao");
+let classes = document.querySelector("#classesPersonalizacao");
+
+
+let elementosPersonalizacao = [
+    classes,
+    racas,
+    aparencia,
+    equipamento
+
+]
+
+let setaMenuVoltar = document.querySelector("#flecha-menu-esquerda");
+let setaMenuAvancar = document.querySelector("#flecha-menu-direita");
+let atual = 0;
+
+setaMenuAvancar.addEventListener("click", () =>{
+    elementosPersonalizacao[atual].style.display = "none";
+    atual++;
+    if (atual == 4) {
+        atual = 0;
+        elementosPersonalizacao[atual].style.display = "grid";
+        return;
+    }
+    elementosPersonalizacao[atual].style.display = "grid";
 });
 
-
-let elementos = document.querySelectorAll(".escolhas div");
-let vetorElementos = Array.from(elementos);
-let sectionGeral = document.querySelector(".geral");
-
-vetorElementos[0].addEventListener("click", () => {
-    sectionGeral.innerHTML += `
-        <section class="personagem">
-            <div>
-                <p>BARBARO</p>
-            </div>
-            <div>
-                <p>BARDO</p>
-            </div>
-            <div>
-                <p>LADINO</p>
-            </div>
-            <div>
-                <p>PALADINO</p>
-            </div>
-            <div>
-                <p>DRUIDA</p>
-            </div>
-
-        </section>
-    `
-})
-vetorElementos[1].addEventListener("click", () => {
-    sectionGeral.innerHTML += `
-        <section class="personagem">
-            <div>
-                <p>ELFO</p>
-            </div>
-            <div>
-                <p>TIELFLING</p>
-            </div>
-            <div>
-                <p>ANÃO</p>
-            </div>
-            <div>
-                <p>MEIO-ORC</p>
-            </div>
-            <div>
-                <p>DRACONATO</p>
-            </div>
-
-        </section>
-    `
-})
-vetorElementos[2].addEventListener("click", () => {
-    sectionGeral.innerHTML += `
-        <section class="personagem">
-            <div>
-                <p>CABELO</p>
-            </div>
-            <div>
-                <p>ROSTO</p>
-            </div>
-            <div>   
-                <p>ACESSORIOS</p>
-            </div>
-            <div>
-                <p>CAMISA</p>
-            </div>
-            <div>
-                <p>CALÇA</p>
-            </div>
-
-        </section>
-    `
-})
-vetorElementos[3].addEventListener("click", () => {
-    sectionGeral.innerHTML += `
-        <section class="personagem">
-            <div>
-                <p>ARMADURA</p>
-            </div>
-            <div>
-                <p>ARMAS</p>
-            </div>
-            <div>
-                <p></p>
-            </div>
-            <div>
-                <p>EQUIPAMENTO</p>
-            </div>
-            <div>
-                <p>ARMADURA</p>
-            </div>
-
-        </section>
-    `
-})
+setaMenuVoltar.addEventListener("click", () => {
+    elementosPersonalizacao[atual].style.display = "none";
+    atual--;
+    if (atual == -1) {
+        atual = 3;
+        elementosPersonalizacao[atual].style.display = "grid";
+        return;
+    }
+    elementosPersonalizacao[atual].style.display = "grid";
+});
 
 document.addEventListener("DOMContentLoaded", function () {
 
