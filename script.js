@@ -1,40 +1,4 @@
-// console.log(dadosDeJogo)
-
-// let section = document.getElementById("Dadosbusca");
-// console.log(section);
-
-
-
-// for(let dadinhos of dadosDeJogo)
-// {
-
-//     section.innerHTML += `
-
-//         <section class="Dadostxtimg">
-//             <img src=${dadinhos.imagem}>
-//             <p>${dadinhos.titulo}</p>
-//             <p>${dadinhos.descricao}</p>
-//         </section>
-// `
-// }
-
 /*RESPONSIVO*//*RESPONSIVO*//*RESPONSIVO*//*RESPONSIVO*/
-
-// const mobileMenu = document.querySelector(".");
-// const navList = document.querySelector(".lista-menu");
-
-// mobileMenu.addEventListener("click", () => {
-//     navList.classList.toggle(".active");
-// });
-
-/*RESPONSIVO*//*RESPONSIVO*//*RESPONSIVO*//*RESPONSIVO*/
-
-// const escolhaClass =document.querySelector(".escolha-class");
-
-// escolhaClass.addEventListener("click", () => {
-//     navList.classList.toggle(".active2");
-// }
-// )
 
 // const mobileMenu = document.querySelector(".mobile-menu");
 // const navList = document.querySelector(".lista-menu");
