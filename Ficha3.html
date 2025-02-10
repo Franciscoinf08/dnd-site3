@@ -25,7 +25,7 @@
     <!-- /GOOGLE FONT -->
 </head>
 
-<body id="body-ficha2">
+<body id="body-ficha3">
 
 
 
@@ -38,16 +38,16 @@
                     <path
                         d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z" />
                 </svg></div>
-            <div id="classe">
+            <div id="classe" class="selecionado">
                 <p>CLASSE</p>
             </div>
-            <div id="raca">
+            <div id="raca" class="naoSelecionado">
                 <p>RAÇA</p>
             </div>
-            <div id="aparencia">
+            <div id="aparencia" class="naoSelecionado">
                 <p>APARENCIA</p>
             </div>
-            <div id="equipamento">
+            <div id="equipamento" class="naoSelecionado">
                 <p>EQUIPAMENTO</p>
             </div>
             <div id="flecha-menu-direita" class="setas"><svg xmlns="http://www.w3.org/2000/svg" height="32px"
@@ -133,6 +133,7 @@
         <section class="galeriaDeSelecao">
             <div class="itemGaleria" id="item-barbaro">
                 <img src="imgs/Barbaro3.png">
+                <h2>Bárbaro</h2>
                 <p>O Bárbaro em D&D é o guerreiro furioso e brutal que lutará até não poder mais, seja sua
                     fúria proveniente da
                     raiva por um mundo injusto ou de seu instinto animal. Este herói selvagem é um excelente
@@ -144,10 +145,13 @@
                     civilização, considerando-a uma fraqueza da humanidade. Se você busca lutar com ferocidade,
                     destruir seus
                     oponentes e nunca cair em combate, prepare-se para conhecer a classe que nasceu para você.</p>
-                </p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-bardo">
                 <img src="imgs/Bardo3.png">
+                <h2>Guerreiro</h2>
                 <p>Os guerreiros mais encantadores de todos, gosta de sair cantando em tabernas em troca de comida e
                     moças bonitas?
                     Então você ja sabe o que escolher. Cantores fenomenais, amantes melhores ainda, essa é a vida de
@@ -164,9 +168,13 @@
                     para inspirar seus companheiros e até lançar uma magia de vez em quando, ter um bardo na sua
                     equipe
                     é de bastante interesse, visto que você nunca mais terá uma noite triste e sem musica.</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-ladino">
                 <img src="imgs/Ladino3.png">
+                <h2>Ladino</h2>
                 <p>Gosta de importunar a todos e sair correndo? Parabens, você ja é quase um ladino. Seres que
                     habitam
                     as
@@ -186,9 +194,13 @@
                     programador, é a melhor que se tem. Escolha o ladino, se não o espirito vingativo de Kallista
                     irá te
                     infernizar.</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-paladino">
                 <img src="imgs/Paladino3.png">
+                <h2>Paladino</h2>
                 <p>Os paladinos nem sempre são
                     de
                     todo o bem,
@@ -202,9 +214,13 @@
                     armas pesadas
                     que simbolizam sua devoção a Tehlu, sua armadura brilha a luz do sol, e traz a tona uma figura
                     divina.</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-druida">
                 <img src="imgs/Druida3.png">
+                <h2>Druida</h2>
                 <p>Os druidas reverenciam a natureza acima de tudo, adquirindo suas magias e outros poderes mágicos,
                     ou
                     da força da natureza per si ou de uma divindade da natureza. Todos os druidas gostam de um
@@ -221,96 +237,173 @@
                     todos
                     adoram um druida
                     doidão.</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-elfo">
-                <img src="imgs/Kallista.png">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
-                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
-                    modi explicabo assumenda nam repellendus!</p>
+                <img src="imgs/elfo3.png">
+                <h2>Elfos</h2>
+                <p> Em Dungeons & Dragons, os elfos são uma raça jogável conhecida por sua agilidade, graça e
+                    longevidade.
+                    Eles possuem uma conexão profunda com a natureza e a magia, o que lhes confere habilidades
+                    especiais,
+                    como visão no escuro e resistência a efeitos de encantamento. Os elfos são ágeis em combate,
+                    preferindo
+                    o arco e flecha ou armas leves. Culturamente, os elfos valorizam a arte, a música e a beleza,
+                    vivendo em
+                    harmonia com a natureza por séculos em florestas ou reinos mágicos. Eles são seres de espírito
+                    livre,
+                    guiados pela curiosidade e sabedoria acumulada ao longo de suas vidas longas.</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-tiefling">
-                <img src="imgs/Kallista.png">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
-                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
-                    modi explicabo assumenda nam repellendus!</p>
+                <img src="imgs/tiefling4.png">
+                <h2>Tielflingns</h2>
+                <p> Em Dungeons & Dragons, os tieflings são uma raça jogável marcada por sua herança infernal,
+                    resultando em
+                    uma aparência demoníaca com chifres, caudas e pele de tons exóticos. Apesar de sua origem sombria,
+                    os
+                    tieflings têm liberdade para escolher seu próprio destino, e muitos lutam contra o preconceito
+                    devido à
+                    sua aparência. Eles são conhecidos por sua astúcia, habilidade em magia e resistência a danos
+                    provenientes de fogo. A cultura tiefling é frequentemente moldada por uma busca de aceitação e
+                    redenção,
+                    com muitos seguindo carreiras como feiticeiros ou ladinos, usando suas habilidades naturais para
+                    sobreviver em um mundo que frequentemente os julga.</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-anão">
-                <img src="imgs/Kallista.png">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
-                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
-                    modi explicabo assumenda nam repellendus!</p>
+                <img src="imgs/anao3.png">
+                <h2>Anões</h2>
+                <p> Em Dungeons & Dragons, os anões são uma raça jogável conhecida por sua resistência, habilidades
+                    em
+                    combate e proficiência em trabalhar com metais e pedras. Eles são conhecidos por sua resistência
+                    física, habilidade em combate corpo a corpo e habilidade em forjaria e construção. Os anões têm
+                    uma
+                    cultura orgulhosa, com forte ênfase na honra, lealdade e tradição. Eles são frequentemente
+                    retratados vivendo em comunidades subterrâneas e valorizam a vida em clãs.</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-meio-orc">
                 <img src="imgs/Kallista.png">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
                     hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
                     modi explicabo assumenda nam repellendus!</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-humano">
-                <img src="imgs/Kallista.png">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
-                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
-                    modi explicabo assumenda nam repellendus!</p>
+                <img src="imgs/humano4.png">
+                <h2>Humanos</h2>
+                <p> Em Dungeons & Dragons, os humanos são uma raça jogável conhecida por sua versatilidade e
+                    adaptabilidade.
+                    Ao contrário de outras raças, os humanos possuem uma vida relativamente curta, o que os leva a se
+                    esforçar por grandes realizações em um curto período. Eles são altamente ambiciosos e têm uma enorme
+                    diversidade cultural, o que permite que sejam encontrados em quase todas as partes do mundo. Os
+                    humanos
+                    são conhecidos por sua capacidade de se destacar em quase qualquer profissão, seja como guerreiros,
+                    magos, ou líderes de nações, refletindo sua natureza diversificada e engenhosa.</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-pele">
                 <img src="imgs/Kallista.png">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
                     hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
                     modi explicabo assumenda nam repellendus!</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-olhos">
                 <img src="imgs/Kallista.png">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
                     hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
                     modi explicabo assumenda nam repellendus!</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-camisa">
                 <img src="imgs/Kallista.png">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
                     hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
                     modi explicabo assumenda nam repellendus!</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-calça">
                 <img src="imgs/Kallista.png">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
                     hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
                     modi explicabo assumenda nam repellendus!</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-cabelo">
                 <img src="imgs/Kallista.png">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
                     hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
                     modi explicabo assumenda nam repellendus!</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-armadura">
                 <img src="imgs/Kallista.png">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
                     hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
                     modi explicabo assumenda nam repellendus!</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-armas">
                 <img src="imgs/Kallista.png">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
                     hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
                     modi explicabo assumenda nam repellendus!</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-magia">
                 <img src="imgs/Kallista.png">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
                     hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
                     modi explicabo assumenda nam repellendus!</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-ferramentas">
                 <img src="imgs/Kallista.png">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
                     hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
                     modi explicabo assumenda nam repellendus!</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
             <div class="itemGaleria" id="item-aleatório">
                 <img src="imgs/Kallista.png">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
                     hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
                     modi explicabo assumenda nam repellendus!</p>
+                <div class="botaoSelecao">
+                    <p>SELECIONAR</p>
+                </div>
             </div>
         </section>
 

@@ -31,30 +31,39 @@ let setaMenuVoltar = document.querySelector("#flecha-menu-esquerda");
 let setaMenuAvancar = document.querySelector("#flecha-menu-direita");
 let atual = 0;
 
+elementosPersonalizacao[atual].style.display = "grid";
+elementosPersonalizacao[atual].classList.add("visible");
+
 setaMenuAvancar.addEventListener("click", () => {
-    elementosPersonalizacao[atual].style.display = "none";
-    atual++;
-    if (atual == 4) {
-        atual = 0;
-        elementosPersonalizacao[atual].style.display = "grid";
+    elementosPersonalizacao[atual].classList.remove("visible");
+    
+    setTimeout(() => {
+        elementosPersonalizacao[atual].style.display = "none"; // Esconde o elemento atual
+        atual = (atual + 1) % elementosPersonalizacao.length; // Avança para o próximo, voltando ao início se necessário
+        
+        elementosPersonalizacao[atual].style.display = "grid"; // Exibe o próximo
+        setTimeout(() => {
+            elementosPersonalizacao[atual].classList.add("visible"); // Adiciona a classe visível
+        }, 10);
+        
         destaque(escolhasSecoes, atual);
-        return;
-    }
-    elementosPersonalizacao[atual].style.display = "grid";
-    destaque(escolhasSecoes, atual);
+    }, 300);
 });
 
 setaMenuVoltar.addEventListener("click", () => {
-    elementosPersonalizacao[atual].style.display = "none";
-    atual--;
-    if (atual == -1) {
-        atual = 3;
-        elementosPersonalizacao[atual].style.display = "grid";
+    elementosPersonalizacao[atual].classList.remove("visible");
+    
+    setTimeout(() => {
+        elementosPersonalizacao[atual].style.display = "none"; // Esconde o elemento atual
+        atual = (atual - 1 + elementosPersonalizacao.length) % elementosPersonalizacao.length; // Volta para o anterior, mantendo o índice válido
+        
+        elementosPersonalizacao[atual].style.display = "grid"; // Exibe o próximo
+        setTimeout(() => {
+            elementosPersonalizacao[atual].classList.add("visible"); // Adiciona a classe visível
+        }, 10);
+        
         destaque(escolhasSecoes, atual);
-        return;
-    }
-    elementosPersonalizacao[atual].style.display = "grid";
-    destaque(escolhasSecoes, atual);
+    }, 300);
 });
 
 function destaque(selecionado, atual){
@@ -81,3 +90,10 @@ botaoMenuDescricao.forEach((botao, index) => {
         fundoDaAba.style.display = "block";
     });
 });
+
+//Codigo para selecionar classes e raças
+
+let vetorDeStrings = [
+    "classe"
+    
+]
