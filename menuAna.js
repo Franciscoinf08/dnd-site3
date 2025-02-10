@@ -31,3 +31,54 @@ document.querySelectorAll('.itens span').forEach(item => {
         item.style.backgroundColor = '#b0b0b0';  // Destaca o item selecionado
     });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const categorias = {
+
+        classe: ["Guerreiro", "Mago", "Ladino", "Clérigo"],
+
+        raca: ["Humano", "Elfo", "Anão", "Orc"],
+
+        aparencia: ["Cabelos", "Olhos", "Pele", "Altura"],
+
+        equipamento: ["Espada", "Cajado", "Arco", "Escudo"],
+
+        armadura: ["Leve", "Média", "Pesada", "Mistica"]
+
+    };
+
+    const botoesPersonagem = document.querySelectorAll(".personagem > div");
+
+    const menuHorizontal = document.querySelector(".escolhas");
+    
+    botoesPersonagem.forEach(botao => {
+
+        botao.addEventListener("click", function () {
+
+            const categoria = this.id.toLowerCase(); // Usa o ID do botão como chave
+
+            if (categorias[categoria]) {
+
+                atualizarMenuHorizontal(categorias[categoria]);
+
+            }
+
+        });
+
+    });
+
+    function atualizarMenuHorizontal(opcoes) {
+
+        menuHorizontal.innerHTML = "";
+
+        opcoes.forEach(opcao => {
+
+            const div = document.createElement("div");
+
+            div.textContent - opcao;
+        })
+    }    
+})

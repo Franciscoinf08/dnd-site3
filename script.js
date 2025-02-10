@@ -36,26 +36,6 @@
 // }
 // )
 
-const personagens = document.querySelectorAll('.personagem > div');//seleciona todos os divs
-let janelaSelenada = null;//define como no inicio nao selecionado
-for (let personagem of personagens) {
-    personagem.addEventListener("click", (e) => {
-        let botaoClicado = e.currentTarget;
-        //console.log("Oioi: "+botaoClicado.dataset.janela); //pega o nome da janela
-        let nomeJanela = botaoClicado.dataset.janela;
-        let janela = document.querySelector("#" + nomeJanela);
-        janela.classList.add('active2')
-        //esconder a antiga (se for != null)
-        if (janelaSelenada != null || janela == "aparencia") {
-            janelaSelenada.classList.remove('active2')
-        }
-
-        janelaSelenada = janela;
-
-    });
-}
-
-
 // const mobileMenu = document.querySelector(".mobile-menu");
 // const navList = document.querySelector(".lista-menu");
 
@@ -63,33 +43,41 @@ for (let personagem of personagens) {
 //     navList.classList.toggle("active");
 // });
 
+//CODIGO DE ALTERAR SEÇAO DE ESCOLHA (PRONTO NAO ALTERAR)
+
 let equipamento = document.querySelector("#equipamentoPersonalizacao");
 let aparencia = document.querySelector("#aparenciaPersonalizacao");
 let racas = document.querySelector("#racasPersonalizacao");
 let classes = document.querySelector("#classesPersonalizacao");
-
 
 let elementosPersonalizacao = [
     classes,
     racas,
     aparencia,
     equipamento
-
+]
+let escolhasSecoes = [
+    document.querySelector("#classe"),
+    document.querySelector("#raca"),
+    document.querySelector("#aparencia"),
+    document.querySelector("#equipamento")
 ]
 
 let setaMenuVoltar = document.querySelector("#flecha-menu-esquerda");
 let setaMenuAvancar = document.querySelector("#flecha-menu-direita");
 let atual = 0;
 
-setaMenuAvancar.addEventListener("click", () =>{
+setaMenuAvancar.addEventListener("click", () => {
     elementosPersonalizacao[atual].style.display = "none";
     atual++;
     if (atual == 4) {
         atual = 0;
         elementosPersonalizacao[atual].style.display = "grid";
+        destaque(escolhasSecoes, atual);
         return;
     }
     elementosPersonalizacao[atual].style.display = "grid";
+    destaque(escolhasSecoes, atual);
 });
 
 setaMenuVoltar.addEventListener("click", () => {
@@ -98,56 +86,34 @@ setaMenuVoltar.addEventListener("click", () => {
     if (atual == -1) {
         atual = 3;
         elementosPersonalizacao[atual].style.display = "grid";
+        destaque(escolhasSecoes, atual);
         return;
     }
     elementosPersonalizacao[atual].style.display = "grid";
+    destaque(escolhasSecoes, atual);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+function destaque(selecionado, atual){
+    for (let i = 0; i < selecionado.length; i++) {
+        selecionado[i].classList.remove("selecionado");
+        selecionado[i].classList.add("naoSelecionado");
+    }
+    selecionado[atual].classList.remove("naoSelecionado");
+    selecionado[atual].classList.add("selecionado");
+}
 
-    const categorias = {
+//CODIGO DE ALTERAR SEÇAO DE ESCOLHA (PRONTO NAO ALTERAR)
 
-        classe: ["Guerreiro", "Mago", "Ladino", "Clérigo"],
 
-        raca: ["Humano", "Elfo", "Anão", "Orc"],
 
-        aparencia: ["Cabelos", "Olhos", "Pele", "Altura"],
+let botaoMenuDescricao = document.querySelectorAll(".personagem div");
+let abaAberta = document.querySelectorAll(".itemGaleria");
+let fundoDaAba = document.querySelector(".galeriaDeSelecao");
 
-        equipamento: ["Espada", "Cajado", "Arco", "Escudo"],
-
-        armadura: ["Leve", "Média", "Pesada", "Mistica"]
-
-    };
-
-    const botoesPersonagem = document.querySelectorAll(".personagem > div");
-
-    const menuHorizontal = document.querySelector(".escolhas");
-    
-    botoesPersonagem.forEach(botao => {
-
-        botao.addEventListener("click", function () {
-
-            const categoria = this.id.toLowerCase(); // Usa o ID do botão como chave
-
-            if (categorias[categoria]) {
-
-                atualizarMenuHorizontal(categorias[categoria]);
-
-            }
-
-        });
-
+botaoMenuDescricao.forEach((botao, index) => {
+    botao.addEventListener("click", () => {
+        abaAberta.forEach(aba => aba.style.display = "none");
+        abaAberta[index].style.display = "grid";
+        fundoDaAba.style.display = "block";
     });
-
-    function atualizarMenuHorizontal(opcoes) {
-
-        menuHorizontal.innerHTML = "";
-
-        opcoes.forEach(opcao => {
-
-            const div = document.createElement("div");
-
-            div.textContent - opcao;
-        })
-    }    
-})
+});

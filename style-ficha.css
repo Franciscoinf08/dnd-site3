@@ -22,18 +22,6 @@
     margin: 0;
 }
 
-body::-webkit-scrollbar {
-    width: 15px;
-}
-
-body::-webkit-scrollbar-track {
-    background: #202020;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #353535;
-}
-
 body{
     overflow-x: hidden;
 }
@@ -46,7 +34,6 @@ h2 {
 }
 
 p {
-    margin: 0 20% 0 20%;
     font-family: 'Baskervville SC';
     font-weight: bold;
     font-size: 20px;
@@ -62,29 +49,6 @@ a {
 
 }
 
-.title,
-.title-center {
-    margin: 0 0 50px 0;
-    font-size: 50px;
-    color: #aa0404;
-    font-family: 'Macondo', cursive;
-    font-weight: 1200;
-}
-
-.title-center {
-    text-align: center;
-
-
-}
-
-.title {
-    margin-left: 10%;
-}
-
-img:active {
-    transform: scale(1.025);
-    transition: 0.5s;
-}
 
 /*GERAL*/
 /*GERAL*/
@@ -105,7 +69,7 @@ img:active {
 
 .geral {
     display: grid;
-    grid-template-columns:15vw 15vw 5vw 30vw 5vw 15vw 15vw;
+    grid-template-columns:15vw 17.5vw 2.5vw 30vw 2.5vw 17.5vw 15vw;
     grid-template-rows: 5vh 10vh 5vh 40vh 40vh;
     align-items: flex-end;
 }
@@ -114,24 +78,20 @@ img:active {
 
 .personagem {
     background-color: rgba(51, 51, 51, 0.5);
-    /* width: calc(30vw - 43.5px); */
     height: calc(80vh - 18.5px);
     border: solid 10px #29251f;
     border-style: groove;
-    /* padding: 12.5px; */
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 4;
     grid-row-end: 6;
-    justify-content: flex-end;
+    justify-content: center;
     display: grid;
-    /* grid-template-columns: 1fr 1fr; */
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     justify-items: center;
     align-items: center;
     box-shadow:
         inset 10px 10px 20px rgba(0, 0, 0, 0.2),
-        /* Sombra interna nos lados esquerdo e superior */
         inset -10px -10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -148,29 +108,38 @@ img:active {
     flex-wrap: wrap;
     flex-direction: row;
     margin: 0 10px 0 10px;
-
-
 }
 
 .personagem div:active {
-
     opacity: 0.5;
 }
+.escolhas div:active {
+    opacity: 0.5;
+}
+
 
 .personagem p,
 .personagem a {
     color: #fcffe5;
-    font-size: 18px;
+    font-size: 15px;
     font-family: 'gothic';
     display: flex;
 }
 
-.escolhas p,
-.escolhas a {
+.selecionado p {
     color: #fcffe5;
     font-size: 13.5px;
     font-family: 'gothic';
     display: flex;
+    transition: 0.5s;
+}
+
+.naoSelecionado p{
+    color: #fcffe5;
+    font-size: 12px;
+    font-family: 'gothic';
+    display: flex;
+    transition: 0.5s;
 }
 
 .personagem div:hover {
@@ -183,9 +152,7 @@ img:active {
 
 .imagem-personagem {
     height: calc(80vh - 43.5px);
-    /* width: calc(30vw - 43.5px); */
     background-color: rgba(51, 51, 51, 0.5);
-    /* background-image: url(imgs/cu2.png); */
     background-position: center;
     grid-column-start: 4;
     grid-column-end: 5;
@@ -200,7 +167,7 @@ img:active {
     background-repeat: no-repeat;
     box-shadow:
         inset 20px 20px 20px rgba(0, 0, 0, 0.2),
-        inset -20px -20px 20px rgba(0, 0, 0, 0.2)
+        inset -20px -20px 20px rgba(0, 0, 0, 0.2);
 }
 
 .geral .personalização {
@@ -210,6 +177,7 @@ img:active {
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
+    transition: 0.5s;
 }
 
 .escolhas {
@@ -218,24 +186,19 @@ img:active {
     grid-column-start: 2;
     grid-column-end: 7;
     background-color: rgba(51, 51, 51, 0.5);
-    font-size: 10px;
-    /* width: calc(30vw - 43.5px); */
-    height: calc(10vh - 18.5px);
+    height: 9vh;
     border: solid 10px #29251f;
     border-style: groove;
-    justify-content: flex-end;
     display: grid;
-    grid-template-columns: 5vw 15vw 15vw 15vw 15vw 5vw;
+    grid-template-columns: 4vw 15vw 15vw 15vw 15vw 4vw;
     justify-items: center;
     align-items: center;
     box-shadow:
         inset 10px 10px 20px rgba(0, 0, 0, 0.2),
-        /* Sombra interna nos lados esquerdo e superior */
         inset -10px -10px 20px rgba(0, 0, 0, 0.2);
 }
-
-.escolhas div{
-    width: 133.5px;
+.selecionado{
+    width: 135px;
     height: 45px;
     display: flex;
     align-items: center;
@@ -243,10 +206,85 @@ img:active {
     justify-content: center;
     background-image: url(imgs/burrado.png);
     background-position: center;
-    background-size: 133.5px 45px;
-    margin: 0 7.5px 0 7.5px;
+    background-size: 135px 45px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    transition: 0.5s;
 }
+.naoSelecionado{
+    opacity: 0.5;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-image: url(imgs/burrado.png);
+    background-position: center;
+    background-size: 120px 40px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    transition: 0.5s;
+}
+
+.setas{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-position: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.classe,
+.raca,
+.aparencia,
+.equipamento
 
 .personagem{
     display: none;
 }
+.classesPersonalizacao{
+    display: grid;
+}
+.galeriaDeSelecao{
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 6;
+    grid-column-end: 7;
+    background-color: rgba(51, 51, 51, 0.5);
+    height: calc(80vh - 18.5px);
+    border: solid 10px #29251f;
+    border-style: groove;
+    box-shadow:
+        inset 10px 10px 20px rgba(0, 0, 0, 0.2),
+        inset -10px -10px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.itemGaleria{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: calc(80vh - 18.5px);
+    overflow: auto;
+}
+.galeriaDeSelecao p{
+    text-align: center;
+    font-size: 15px;
+    margin: 7.5%;
+}
+
+.galeriaDeSelecao img{
+    width: 12vw;
+    margin: 0 auto;
+    padding: 2vh;
+}
+.itemGaleria{
+    display: none;
+}
+.galeriaDeSelecao{
+    display: none;
+}
+

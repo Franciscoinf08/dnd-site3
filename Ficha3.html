@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customização</title>
     <link rel="stylesheet" href="style-ficha.css">
+    <link rel="icon" href="imgs/3714923-middle-removebg-preview.png">
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,96 +33,287 @@
 
     <div class="geral">
         <section class="escolhas">
-            <button id="flecha-menu-esquerda"><<<</button>
-                    <div id="classe">
-                        <p>CLASSE</p>
-                    </div>
-                    <div id="raca">
-                        <p>RAÇA</p>
-                    </div>
-                    <div id="aparencia">
-                        <p>APARENCIA</p>
-                    </div>
-                    <div id="equipamento">
-                        <p>EQUIPAMENTO</p>
-                    </div>
-                    <button id="flecha-menu-direita">>>></button>
+            <div id="flecha-menu-esquerda" class="setas"><svg xmlns="http://www.w3.org/2000/svg" height="32px"
+                    viewBox="0 -960 960 960" width="32px" fill="#fbf0c4">
+                    <path
+                        d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z" />
+                </svg></div>
+            <div id="classe">
+                <p>CLASSE</p>
+            </div>
+            <div id="raca">
+                <p>RAÇA</p>
+            </div>
+            <div id="aparencia">
+                <p>APARENCIA</p>
+            </div>
+            <div id="equipamento">
+                <p>EQUIPAMENTO</p>
+            </div>
+            <div id="flecha-menu-direita" class="setas"><svg xmlns="http://www.w3.org/2000/svg" height="32px"
+                    viewBox="0 -960 960 960" width="32px" fill="#fbf0c4">
+                    <path
+                        d="M383-480 200-664l56-56 240 240-240 240-56-56 183-184Zm264 0L464-664l56-56 240 240-240 240-56-56 183-184Z" />
+                </svg></div>
         </section>
         <div class="imagem-personagem"></div>
-        
-            <section class="personagem" id="classesPersonalizacao">
-                <div>
-                    <p>BARBARO</p>
-                </div>
-                <div>
-                    <p>BARDO</p>
-                </div>
-                <div>
-                    <p>LADINO</p>
-                </div>
-                <div>
-                    <p>PALADINO</p>
-                </div>
-                <div>
-                    <p>DRUIDA</p>
-                </div>
 
-            </section>
-            <section class="personagem" id="racasPersonalizacao">
-                <div>
-                    <p>ELFO</p>
-                </div>
-                <div>
-                    <p>TIEFLING</p>
-                </div>
-                <div>
-                    <p>ANÃO</p>
-                </div>
-                <div>
-                    <p>MEIO ORC</p>
-                </div>
-                <div>
-                    <p>HUMANO</p>
-                </div>
+        <section class="personagem" id="classesPersonalizacao">
+            <div>
+                <p>BARBARO</p>
+            </div>
+            <div>
+                <p>BARDO</p>
+            </div>
+            <div>
+                <p>LADINO</p>
+            </div>
+            <div>
+                <p>PALADINO</p>
+            </div>
+            <div>
+                <p>DRUIDA</p>
+            </div>
 
-            </section>
-            <section class="personagem" id="aparenciaPersonalizacao">
-                <div>
-                    <p>PELE</p>
-                </div>
-                <div>
-                    <p>OLHOS</p>
-                </div>
-                <div>
-                    <p>CAMISA</p>
-                </div>
-                <div>
-                    <p>CALÇA</p>
-                </div>
-                <div>
-                    <p>CABELO</p>
-                </div>
+        </section>
+        <section class="personagem" id="racasPersonalizacao">
+            <div>
+                <p>ELFO</p>
+            </div>
+            <div>
+                <p>TIEFLING</p>
+            </div>
+            <div>
+                <p>ANÃO</p>
+            </div>
+            <div>
+                <p>MEIO ORC</p>
+            </div>
+            <div>
+                <p>HUMANO</p>
+            </div>
 
-            </section>
-            <section class="personagem" id="equipamentoPersonalizacao">
-                <div>
-                    <p>ARMADURA</p>
-                </div>
-                <div>
-                    <p>ARMAS</p>
-                </div>
-                <div>
-                    <p>MAGIA</p>
-                </div>
-                <div>
-                    <p>FERRAMENTAS</p>
-                </div>
-                <div>
-                    <p>ITEM ALEATORIO</p>
-                </div>
+        </section>
+        <section class="personagem" id="aparenciaPersonalizacao">
+            <div>
+                <p>PELE</p>
+            </div>
+            <div>
+                <p>OLHOS</p>
+            </div>
+            <div>
+                <p>CAMISA</p>
+            </div>
+            <div>
+                <p>CALÇA</p>
+            </div>
+            <div>
+                <p>CABELO</p>
+            </div>
 
-            </section>
-        
+        </section>
+        <section class="personagem" id="equipamentoPersonalizacao">
+            <div>
+                <p>ARMADURA</p>
+            </div>
+            <div>
+                <p>ARMAS</p>
+            </div>
+            <div>
+                <p>MAGIA</p>
+            </div>
+            <div>
+                <p>FERRAMENTAS</p>
+            </div>
+            <div>
+                <p>ITEM ALEATORIO</p>
+            </div>
+        </section>
+
+        <section class="galeriaDeSelecao">
+            <div class="itemGaleria" id="item-barbaro">
+                <img src="imgs/Barbaro3.png">
+                <p>O Bárbaro em D&D é o guerreiro furioso e brutal que lutará até não poder mais, seja sua
+                    fúria proveniente da
+                    raiva por um mundo injusto ou de seu instinto animal. Este herói selvagem é um excelente
+                    companheiro de
+                    viagem para seu grupo de aventureiros, sempre demonstrando que a força bruta é uma arma
+                    formidável, apesar
+                    de ser frequentemente subestimado por sua suposta baixa inteligência. Os Bárbaros são
+                    contrários à
+                    civilização, considerando-a uma fraqueza da humanidade. Se você busca lutar com ferocidade,
+                    destruir seus
+                    oponentes e nunca cair em combate, prepare-se para conhecer a classe que nasceu para você.</p>
+                </p>
+            </div>
+            <div class="itemGaleria" id="item-bardo">
+                <img src="imgs/Bardo3.png">
+                <p>Os guerreiros mais encantadores de todos, gosta de sair cantando em tabernas em troca de comida e
+                    moças bonitas?
+                    Então você ja sabe o que escolher. Cantores fenomenais, amantes melhores ainda, essa é a vida de
+                    um
+                    bardo.
+                    Eles viajam pelo mundo como nomades, que não criam vinculos por onde passam, são muitas vezes
+                    taxados de
+                    ladrões ou prostitutas, mas na verdade, são seres em que a alma não consegue ficar em um so
+                    local.
+                    Todos os
+                    bardos verdadeiros são menbros de uma unica familia, os Edena Ruh. Eles utilizam das
+                    encantadores
+                    palavras magicas
+                    para inspirar seus companheiros e até lançar uma magia de vez em quando, ter um bardo na sua
+                    equipe
+                    é de bastante interesse, visto que você nunca mais terá uma noite triste e sem musica.</p>
+            </div>
+            <div class="itemGaleria" id="item-ladino">
+                <img src="imgs/Ladino3.png">
+                <p>Gosta de importunar a todos e sair correndo? Parabens, você ja é quase um ladino. Seres que
+                    habitam
+                    as
+                    sombras, furtando e matando para sobreviver, essa é a vida dos ladinos, a rua é sua casa e a
+                    escuridão
+                    sua amiga. A maioria dos ladinos são pessoas de indole inabalavel, que utilizam dos outros em
+                    seu
+                    beneficio
+                    próprio. Com muito dano e pouca defesa, essa classe definitivamente é para quem gosta de bater e
+                    fugir logo
+                    em seguida (o famoso cagão), reza a lenda que o ladino mais fraco com apenas uma adaga é capaz
+                    de
+                    matar
+                    até o próprio Tehlu só na base do bate corre. Enfim, uma classe amada e odiada, mas que na
+                    opinião
+                    do
+                    programador, é a melhor que se tem. Escolha o ladino, se não o espirito vingativo de Kallista
+                    irá te
+                    infernizar.</p>
+            </div>
+            <div class="itemGaleria" id="item-paladino">
+                <img src="imgs/Paladino3.png">
+                <p>Os paladinos nem sempre são
+                    de
+                    todo o bem,
+                    alguns utilizam do nome da igreja de Tehlu para cometer atos que normalmente não os seriam
+                    permitidos. Ter um
+                    paladino como inimigo é algo assustador, mas quando ele se torna seu amigo vai perceber que ele
+                    é
+                    tão burro quanto
+                    uma porta. Lutadores formidaveis que gostam sempre de levar
+                    consigo
+                    armas pesadas
+                    que simbolizam sua devoção a Tehlu, sua armadura brilha a luz do sol, e traz a tona uma figura
+                    divina.</p>
+            </div>
+            <div class="itemGaleria" id="item-druida">
+                <img src="imgs/Druida3.png">
+                <p>Os druidas reverenciam a natureza acima de tudo, adquirindo suas magias e outros poderes mágicos,
+                    ou
+                    da força da natureza per si ou de uma divindade da natureza. Todos os druidas gostam de um
+                    verdinho,
+                    alguns mais que outros. Se você quer virar um rato e se esgueirar pelas fortalezas do mundo, ou
+                    um
+                    gavião
+                    para ver tudo de um angulo diferente, saiba que os druidas fazem tudo isso, e mais, eles
+                    conseguem
+                    usufruir do
+                    poder da floresta para invocar poderosas magias, que vão subjulgar os inimigos em nome da
+                    natureza.
+                    Estrategia? Nahhh, apenas vire um animal e saia por ai usando um verdinho e você verá porque
+                    todos
+                    adoram um druida
+                    doidão.</p>
+            </div>
+            <div class="itemGaleria" id="item-elfo">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+            <div class="itemGaleria" id="item-tiefling">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+            <div class="itemGaleria" id="item-anão">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+            <div class="itemGaleria" id="item-meio-orc">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+            <div class="itemGaleria" id="item-humano">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+            <div class="itemGaleria" id="item-pele">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+            <div class="itemGaleria" id="item-olhos">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+            <div class="itemGaleria" id="item-camisa">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+            <div class="itemGaleria" id="item-calça">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+            <div class="itemGaleria" id="item-cabelo">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+            <div class="itemGaleria" id="item-armadura">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+            <div class="itemGaleria" id="item-armas">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+            <div class="itemGaleria" id="item-magia">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+            <div class="itemGaleria" id="item-ferramentas">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+            <div class="itemGaleria" id="item-aleatório">
+                <img src="imgs/Kallista.png">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium veritatis sed porro nostrum
+                    hic, velit ullam consectetur molestiae deleniti tempore aspernatur illo fugit accusantium? Ipsam
+                    modi explicabo assumenda nam repellendus!</p>
+            </div>
+        </section>
+
     </div>
     <script src="dados.js"></script>
     <script src="script.js"></script>
