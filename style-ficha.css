@@ -70,15 +70,15 @@ a {
 
 .geral {
     display: grid;
-    grid-template-columns:15vw 17.5vw 2.5vw 30vw 2.5vw 17.5vw 15vw;
+    grid-template-columns: 7.5vw 20vw 2.5vw 40vw 2.5vw 20vw 7.5vw;
     grid-template-rows: 5vh 10vh 5vh 40vh 40vh;
     align-items: flex-end;
-}
+}   
 
 
 
 .personagem {
-    background-color: rgba(51, 51, 51, 0.5);
+    background-color: rgba(51, 51, 51, 0.5);    
     height: calc(80vh - 18.5px);
     border: solid 10px #29251f;
     border-style: groove;
@@ -141,24 +141,27 @@ a {
     display: none;
 }
 
-.imagem-personagem {
-    height: calc(80vh - 43.5px);
+#imagem-personagem {
+    height: calc(80vh - 18.5px);
     background-color: rgba(51, 51, 51, 0.5);
-    background-position: center;
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 4;
     grid-row-end: 6;
-    background-size: cover;
     border: solid 10px #29251f;
     border-style: groove;
-    padding: 12.5px;
-    display: grid;
-    align-items: flex-start;
-    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     box-shadow:
         inset 20px 20px 20px rgba(0, 0, 0, 0.2),
         inset -20px -20px 20px rgba(0, 0, 0, 0.2)
+}
+
+#imagem-personagem img{
+    max-width: 35vw;
+    max-height: 35vw;
+    position: absolute;
 }
 
 .geral .personalização {
@@ -180,7 +183,7 @@ a {
     border: solid 10px #29251f;
     border-style: groove;
     display: grid;
-    grid-template-columns: 4vw 15vw 15vw 15vw 15vw 4vw;
+    grid-template-columns: 4vw 19.25vw 19.25vw 19.25vw 19.25vw 4vw;
     justify-items: center;
     align-items: center;
     box-shadow:
@@ -325,3 +328,4 @@ a {
 .botaoSelecao:active{
     opacity: 0.5;
 }
+

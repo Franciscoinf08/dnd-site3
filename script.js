@@ -136,9 +136,10 @@ let galeriaImagensHumanos = [
 ];
 
 let botoesClasse = document.querySelectorAll(".botaoSelecaoClasse");
+let divDeImagens = document.querySelector("#imagem-personagem");
 
 botoesClasse.forEach((botao, index) =>{
     botao.addEventListener("click", () =>{
-        
+        divDeImagens.innerHTML
     })
 })
