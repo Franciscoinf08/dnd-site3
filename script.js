@@ -38,12 +38,12 @@ setaMenuAvancar.addEventListener("click", () => {
     elementosPersonalizacao[atual].classList.remove("visible");
     
     setTimeout(() => {
-        elementosPersonalizacao[atual].style.display = "none"; // Esconde o elemento atual
-        atual = (atual + 1) % elementosPersonalizacao.length; // Avança para o próximo, voltando ao início se necessário
+        elementosPersonalizacao[atual].style.display = "none"; 
+        atual = (atual + 1) % elementosPersonalizacao.length;
         
-        elementosPersonalizacao[atual].style.display = "grid"; // Exibe o próximo
+        elementosPersonalizacao[atual].style.display = "grid";
         setTimeout(() => {
-            elementosPersonalizacao[atual].classList.add("visible"); // Adiciona a classe visível
+            elementosPersonalizacao[atual].classList.add("visible");
         }, 10);
         
         destaque(escolhasSecoes, atual);
@@ -54,12 +54,12 @@ setaMenuVoltar.addEventListener("click", () => {
     elementosPersonalizacao[atual].classList.remove("visible");
     
     setTimeout(() => {
-        elementosPersonalizacao[atual].style.display = "none"; // Esconde o elemento atual
-        atual = (atual - 1 + elementosPersonalizacao.length) % elementosPersonalizacao.length; // Volta para o anterior, mantendo o índice válido
+        elementosPersonalizacao[atual].style.display = "none"; 
+        atual = (atual - 1 + elementosPersonalizacao.length) % elementosPersonalizacao.length;
         
-        elementosPersonalizacao[atual].style.display = "grid"; // Exibe o próximo
+        elementosPersonalizacao[atual].style.display = "grid"; 
         setTimeout(() => {
-            elementosPersonalizacao[atual].classList.add("visible"); // Adiciona a classe visível
+            elementosPersonalizacao[atual].classList.add("visible"); 
         }, 10);
         
         destaque(escolhasSecoes, atual);
@@ -93,7 +93,52 @@ botaoMenuDescricao.forEach((botao, index) => {
 
 //Codigo para selecionar classes e raças
 
-let vetorDeStrings = [
-    "classe"
-    
-]
+let galeriaImagensClasses = [
+    "imgsFicha/barbaro",
+    "imgsFicha/bardo",
+    "imgsFicha/ladino",
+    "imgsFicha/paladino",
+    "imgsFicha/druida"
+];
+
+let galeriaImagensElfos = [
+    "imgsFicha/elfo1",
+    "imgsFicha/elfo2",
+    "imgsFicha/elfo3",
+    "imgsFicha/elfo4"
+];
+let galeriaImagensTieflings = [ 
+    "imgsFicha/tiefling1",
+    "imgsFicha/tiefling2",
+    "imgsFicha/tiefling3",
+    "imgsFicha/tiefling4"
+];
+
+let galeriaImagensAnoes = [ 
+    "imgsFicha/anao1",
+    "imgsFicha/anao2",
+    "imgsFicha/anao3",
+    "imgsFicha/anao4"
+];
+
+let galeriaImagensMeioOrcs = [ 
+    "imgsFicha/meioOrc1",
+    "imgsFicha/meioOrc2",
+    "imgsFicha/meioOrc3",
+    "imgsFicha/meioOrc4"
+];
+
+let galeriaImagensHumanos = [ 
+    "imgsFicha/humano1",
+    "imgsFicha/humano2",
+    "imgsFicha/humano3",
+    "imgsFicha/humano4"
+];
+
+let botoesClasse = document.querySelectorAll(".botaoSelecaoClasse");
+
+botoesClasse.forEach((botao, index) =>{
+    botao.addEventListener("click", () =>{
+        
+    })
+})
