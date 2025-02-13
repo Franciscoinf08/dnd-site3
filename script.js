@@ -143,3 +143,11 @@ botoesClasse.forEach((botao, index) =>{
         divDeImagens.innerHTML
     })
 })
+
+let corOlhos = document.querySelector("#inputOlhos");
+let olhos = document.querySelector("#olhos");
+
+corOlhos.addEventListener('input', () =>{
+    olhos.style.backgroundColor = corOlhos.value;
+})  
+
