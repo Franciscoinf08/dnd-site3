@@ -156,15 +156,16 @@ botoesClasse.forEach((botao, index) => {
 let corOlhos = document.querySelector("#inputOlhos");
 let olhos = document.querySelector("#olhos");
 
-corOlhos.addEventListener('input', () => {
+corOlhos.addEventListener("input", () => {
     olhos.style.backgroundColor = corOlhos.value;
 })
 
 //CODIGO DE ALTERAÇAO DA COR DOS OLHOS
 
-//CODIGO DE ALTERAÇAO DE CABELOS
+//CODIGO DE ALTERAÇAO DE PECAS DE ROUPAS
 let galerias = {
     cabelos: [
+        "imgs-ficha3/cabelos/vazio.png",
         "imgs-ficha3/cabelos/Cabelo1A.png",
         "imgs-ficha3/cabelos/Cabelo1B.png",
         "imgs-ficha3/cabelos/Cabelo1C.png",
@@ -198,6 +199,7 @@ let galerias = {
         "imgs-ficha3/cabelos/Cabelo7.png"
     ],
     calcas: [
+        "imgs-ficha3/calcas/vazio.png",
         "imgs-ficha3/calcas/Calca1.png",
         "imgs-ficha3/calcas/Calca2.png",
         "imgs-ficha3/calcas/Calca3.png",
@@ -205,6 +207,7 @@ let galerias = {
         "imgs-ficha3/calcas/Calca5.png"
     ],
     blusas: [
+        "imgs-ficha3/blusas/vazio.png",
         "imgs-ficha3/blusas/Blusa1.png",
         "imgs-ficha3/blusas/Blusa2.png",
         "imgs-ficha3/blusas/Blusa3.png",
@@ -233,12 +236,6 @@ botaoMenuDescricao.forEach((botao, index) => {
     });
 });
 
-botaoMenuDescricao[14].addEventListener("click", () => {
-    galeriaAtual = "cabelos";
-    setaDireitaPersonagem.style.display = "flex";
-    setaEsquerdaPersonagem.style.display = "flex";
-    atualizarImagem();
-});
 
 botaoMenuDescricao[13].addEventListener("click", () => {
     galeriaAtual = "calcas";
@@ -254,6 +251,13 @@ botaoMenuDescricao[12].addEventListener("click", () => {
     atualizarImagem();
 });
 
+botaoMenuDescricao[14].addEventListener("click", () => {
+    galeriaAtual = "cabelos";
+    setaDireitaPersonagem.style.display = "flex";
+    setaEsquerdaPersonagem.style.display = "flex";
+    atualizarImagem();
+});
+
 setaDireitaPersonagem.addEventListener("click", () => {
     selecionados[galeriaAtual] = (selecionados[galeriaAtual] + 1) % galerias[galeriaAtual].length;
     atualizarImagem();
@@ -264,12 +268,38 @@ setaEsquerdaPersonagem.addEventListener("click", () => {
     atualizarImagem();
 });
 
-function atualizarImagem() {
-    divDeImagens.innerHTML = `<div id="olhos"></div><img src="imgs-ficha3/H3.png">`;
 
-    Object.keys(galerias).forEach((categoria) => {
-        let img = document.createElement("img");
-        img.src = galerias[categoria][selecionados[categoria]];
-        divDeImagens.appendChild(img);
-    });
+function atualizarImagem() {
+    divDeImagens.innerHTML = `
+        <div id="olhos"></div>
+        <img src="imgs-ficha3/H3.png">
+        <img class="calca" src="${galerias.calcas[selecionados.calcas]}">
+        <img class="blusa" src="${galerias.blusas[selecionados.blusas]}">
+        <img class="cabelo" src="${galerias.cabelos[selecionados.cabelos]}">
+    `;
 }
+
+//CODIGO DE ALTERAÇAO DE PECAS DE ROUPAS
+
+//CODIGO DA SEÇAO  DE AVISOS
+
+let botaoAvisos = document.querySelector("#botao-avisos");
+let sectionAvisos = document.querySelector("#avisos")
+
+botaoAvisos.addEventListener("click", () =>{
+    sectionAvisos.style.display = "none";
+})
+
+//CODIGO DA SEÇAO  DE AVISOS
+
+//TITULO FICHA
+
+document.addEventListener("DOMContentLoaded", () => {
+    let botaoSomTrovao = document.querySelector(".title-ficha");
+
+    botaoSomTrovao.addEventListener("click", () => {
+        let som = new Audio("Sons/trovao.mp3"); 
+        som.play();
+        botaoSomTrovao.style.color = "#aa0404";
+    });
+});

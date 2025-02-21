@@ -920,12 +920,6 @@ h2 {
     cursor: pointer;
 }
 
-
-
-.moldura .title-ficha:active {
-    color: #aa0404;
-}
-
 .papiro {
     background-image: url(imgs/Antiguo_marco_de_hoja_de_papel_medieval_Rollo_de_pergamino_aislado_en_blanco___Imagen_Premium_generada_con_IA-removebg-preview.png);
     background-repeat: no-repeat;
@@ -935,10 +929,6 @@ h2 {
     background-size: 800px;
 }
 
-.papiro>.ficha-title {
-    padding-top: 200px;
-    padding-bottom: 200px;
-}
 
 .moldura {
     display: block;
@@ -999,7 +989,7 @@ h2 {
 
 }
 
-.status>div {
+.status>a {
     width: 198px;
     height: 73px;
     display: flex;
@@ -1016,7 +1006,7 @@ h2 {
 
 }
 
-.status>div:active {
+.status>a:active {
     opacity: 0.5;
 }
 

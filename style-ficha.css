@@ -24,6 +24,9 @@
 
 body{
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h2 {
@@ -386,3 +389,59 @@ label {
     width: 80px;
 }
 
+#avisos{
+    display: block;
+    align-items: center;
+    background-color: #fcffe5;
+    border-radius: 15px;
+    padding: 50px;
+    text-align: center;
+    margin: 100px 100px;
+    border: rgb(155, 0, 0) solid 15px;
+    border-style: groove;
+    position: absolute;
+    z-index: 2;
+}
+#avisos p{
+    color: #000;
+    margin: 50px;
+}
+
+#botao-avisos{
+    width: 180px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-image: url(imgs/burrado.png);
+    background-position: center;
+    background-size: 180px 60px;
+    margin: 30px auto 30px auto;
+}
+
+#botao-avisos p{
+    color: #fcffe5;
+    font-size: 15px;
+    font-family: 'gothic';
+    display: flex;
+}
+
+#botao-avisos:hover{
+    cursor: pointer;
+}
+#botao-avisos:active{
+    opacity: 0.5;
+}
+
+.calca{
+    z-index: 2;
+}
+
+.blusa{
+    z-index: 3;
+}
+
+.cabelo{
+    z-index: 4;
+}
