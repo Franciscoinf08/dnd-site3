@@ -203,7 +203,7 @@ label {
     border: solid 10px #29251f;
     border-style: groove;
     display: grid;
-    grid-template-columns: 4vw 19.25vw 19.25vw 19.25vw 19.25vw 4vw;
+    grid-template-columns: 7.5vw 20vw 20vw 20vw 20vw 7.5vw;
     justify-items: center;
     align-items: center;
     box-shadow:
@@ -361,9 +361,29 @@ label {
     margin: 0 auto;
     justify-content: center;
     display: flex;
+    margin-top: 15px;
     width: 80px;
     height: 40px;
-    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #aa0404;
+    cursor: pointer;
+    box-shadow:
+        inset 2px 2px 5px rgba(255, 255, 255, 0.1),
+        inset -2px -2px 5px rgba(0, 0, 0, 0.3),
+        2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#inputOlhos:hover {
+    transform: scale(1.05);
+    box-shadow:
+        inset 2px 2px 5px rgba(255, 255, 255, 0.2),
+        inset -2px -2px 5px rgba(0, 0, 0, 0.5),
+        3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+#inputOlhos::-webkit-color-swatch {
+    border-radius: 5px;
+    border: none;
 }
 
 #flecha-personagem-esquerda {
