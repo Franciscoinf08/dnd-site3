@@ -129,14 +129,6 @@ let galeriaImagensMeioOrcs = [
     "imgsFicha/meioOrc4"
 ];
 
-let galeriaImagensHumanos = [
-    "imgsFicha/humano1",
-    "imgsFicha/humano2",
-    "imgsFicha/humano3",
-    "imgsFicha/humano4"
-];
-
-
 
 let botoesClasse = document.querySelectorAll(".botaoSelecaoClasse");
 let divDeImagens = document.querySelector("#imagem-personagem");
@@ -153,12 +145,7 @@ botoesClasse.forEach((botao, index) => {
 });
 //CODIGO DE ALTERAÇAO DA COR DOS OLHOS
 
-let corOlhos = document.querySelector("#inputOlhos");
-let olhos = document.querySelector("#olhos");
 
-corOlhos.addEventListener("input", () => {
-    olhos.style.backgroundColor = corOlhos.value;
-})
 
 //CODIGO DE ALTERAÇAO DA COR DOS OLHOS
 
@@ -268,11 +255,48 @@ setaEsquerdaPersonagem.addEventListener("click", () => {
     atualizarImagem();
 });
 
+const coresPele = document.querySelectorAll(".cor-pele");
+let srcHumano = "imgs-ficha3/branco.png";
+
+let selecionado2 = null;
+
+coresPele.forEach(cor => {
+  cor.addEventListener("click", () => {
+    coresPele.forEach(c => c.classList.remove("selecionado2"));
+    cor.classList.add("selecionado2");
+    selecionado2 = cor.id;
+    srcHumano = `imgs-ficha3/${selecionado2}.png`;
+    const imagem = document.querySelector("#humano");
+    imagem.src = srcHumano;
+    atualizarImagem();
+  });
+});
+
+const coresOlho = document.querySelectorAll(".cor-olho");
+let srcOlhos = "imgs-ficha3/olhos/oPreto.png"
+
+let selecionado3 = null;
+
+coresOlho.forEach(cor => {
+  cor.addEventListener("click", () => {
+    coresOlho.forEach(c => c.classList.remove("selecionado3"));
+    cor.classList.add("selecionado3");
+    selecionado3 = cor.id;
+    srcOlhos = `imgs-ficha3/olhos/${selecionado3}.png`;
+    const imagemOlhos = document.querySelector("#olhos");
+    imagemOlhos.src = srcOlhos;
+    atualizarImagem();
+  });
+});
+
+
+
+
 
 function atualizarImagem() {
     divDeImagens.innerHTML = `
-        <div id="olhos"></div>
-        <img src="imgs-ficha3/H3.png">
+        <img id="olhos" src="${srcOlhos}">
+        <img id="humano" src="${srcHumano}">
         <img class="calca" src="${galerias.calcas[selecionados.calcas]}">
         <img class="blusa" src="${galerias.blusas[selecionados.blusas]}">
         <img class="cabelo" src="${galerias.cabelos[selecionados.cabelos]}">
@@ -294,12 +318,18 @@ botaoAvisos.addEventListener("click", () =>{
 
 //TITULO FICHA
 
-document.addEventListener("DOMContentLoaded", () => {
-    let botaoSomTrovao = document.querySelector(".title-ficha");
+// document.addEventListener("DOMContentLoaded", () => {
+//     let botaoSomTrovao = document.querySelector(".title-ficha");
 
-    botaoSomTrovao.addEventListener("click", () => {
-        let som = new Audio("Sons/trovao.mp3"); 
-        som.play();
-        botaoSomTrovao.style.color = "#aa0404";
-    });
-});
+//     botaoSomTrovao.addEventListener("click", () => {
+//         let som = new Audio("Sons/trovao.mp3"); 
+//         som.play();
+//         botaoSomTrovao.style.color = "#aa0404";
+//     });
+// });
+
+//COR DE PELE
+
+
+
+

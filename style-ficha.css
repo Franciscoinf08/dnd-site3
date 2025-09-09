@@ -175,14 +175,7 @@ label {
     position: absolute;
 }
 
-#olhos {
-    width: 45px;
-    background-color: #aa0404;
-    position: absolute;
-    height: 45px;
-    bottom: 80%;
-    left: 45%;
-}
+
 
 .geral .personalização {
     align-items: center;
@@ -349,43 +342,6 @@ label {
     opacity: 0.5;
 }
 
-#item-olhos{
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-}
-
-#inputOlhos {
-    margin: 0 auto;
-    justify-content: center;
-    display: flex;
-    margin-top: 15px;
-    width: 80px;
-    height: 40px;
-    border-radius: 5px;
-    background-color: #aa0404;
-    cursor: pointer;
-    box-shadow:
-        inset 2px 2px 5px rgba(255, 255, 255, 0.1),
-        inset -2px -2px 5px rgba(0, 0, 0, 0.3),
-        2px 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-#inputOlhos:hover {
-    transform: scale(1.05);
-    box-shadow:
-        inset 2px 2px 5px rgba(255, 255, 255, 0.2),
-        inset -2px -2px 5px rgba(0, 0, 0, 0.5),
-        3px 3px 8px rgba(0, 0, 0, 0.3);
-}
-
-#inputOlhos::-webkit-color-swatch {
-    border-radius: 5px;
-    border: none;
-}
-
 #flecha-personagem-esquerda {
     grid-column-start: 3;
     grid-column-end: 4;
@@ -393,8 +349,7 @@ label {
     grid-row-end: 5;
     display: flex;
     align-items: center;
-    justify-content: center;
-    display: none;
+    justify-content: right;
     width: 80px;
 }
 #flecha-personagem-direita {
@@ -404,8 +359,7 @@ label {
     grid-row-end: 5;
     display: flex;
     align-items: center;
-    justify-content: center;
-    display: none;
+    justify-content: right;
     width: 80px;
 }
 
@@ -464,4 +418,137 @@ label {
 
 .cabelo{
     z-index: 4;
+}
+
+#item-pele {
+    width: 15vw;
+    height: 15vw;
+    display: grid;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.cor-pele {
+    border-radius: 50%;
+    border: solid 5px #aa0404;
+    width: 70px;
+    height: 70px;
+    background-color: #29251f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.cor-pele:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow:
+        inset 2px 2px 5px rgba(255, 255, 255, 0.2),
+        inset -2px -2px 5px rgba(0, 0, 0, 0.5),
+        3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+#branco {
+    background-color: rgb(226 190 184);
+}
+#moreno {
+    background-color: hsl(21.35deg 47.27% 56.86%);
+}
+#pardo {
+    background-color: hsl(21.7deg 45.63% 40.39%);
+}
+#negro {
+    background-color: hsl(22.19deg 60.33% 23.73%);
+}
+
+.cor-pele.selecionado2 {
+    outline: 4px solid #000;
+}
+
+
+#item-olhos {
+    width: 15vw;
+    height: auto; 
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#item-olhos p{
+    color: #000;
+}
+
+.cor-olho{
+    border-radius: 50%;
+    border: solid 5px #aa0404;
+    width: 70px;
+    height: 70px;
+    background-color: #29251f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.cor-olho:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow:
+        inset 2px 2px 5px rgba(255, 255, 255, 0.2),
+        inset -2px -2px 5px rgba(0, 0, 0, 0.5),
+        3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cor-olho.selecionado3{
+    outline: 4px solid #000;
+}
+
+#oBranco {
+    background-color: rgb(254 245 245);
+    color: #000;
+}
+#oAmareloClaro {
+    background-color: rgb(245 221 156);
+}
+#oAmarelo {
+    background-color: rgb(254 233 15);
+}
+#oLaranja {
+    background-color: rgb(254 129 15);
+}
+#oRosa {
+    background-color: rgb(254 162 175);
+}
+#oVermelho {
+    background-color: rgb(238 40 47);
+}
+#oVinho {
+    background-color: rgb(162 15 58);
+}
+#oRoxo {
+    background-color: rgb(124 59 152);
+}
+#oAzul {
+    background-color: rgb(66 64 153);
+}
+#oAzulbb {
+    background-color: rgb(147 216 232);
+}   
+#oVerde {
+    background-color: rgb(53 103 62);
+}
+#oPreto {
+    background-color: rgb(9 20 21);
+}
+#oPreto p {
+    color: #ffffff;
 }
