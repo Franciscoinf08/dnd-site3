@@ -1148,14 +1148,16 @@ iframe {
     }
 
     
+
+}
+
 #monte-personagem {
-    display: flex;
-    padding: 40000000000px;
+    display: flex; 
     flex-direction: column;
     align-items: center;
 }
 
-#botaoPrsonagem{
+#botaoPersonagem{
     width: 198px;
     height: 73px;
     display: flex;
@@ -1168,8 +1170,18 @@ iframe {
     flex-wrap: wrap;
     flex-direction: row;
     margin: 0 10px 0 10px;
+    color: #fcffe5;
+    font-size: 18px;
+    font-family: 'gothic';
+    display: flex;
 }
-    
+
+
+#botaoPersonagem:hover{
+    cursor: pointer;
+}
+#botaoPersonagem:active{
+    opacity: 0.5;
 }
 
 /*FICHA*/
