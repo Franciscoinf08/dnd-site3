@@ -67,22 +67,6 @@ function destaque(selecionado, atual) {
     selecionado[atual].classList.add("selecionado");
 }
 
-//CODIGO DE ALTERAR SEÇAO DE ESCOLHA (PRONTO NAO ALTERAR)
-
-
-
-let botaoMenuDescricao = document.querySelectorAll(".personagem div");
-let abaAberta = document.querySelectorAll(".itemGaleria");
-let fundoDaAba = document.querySelector(".galeriaDeSelecao");
-
-botaoMenuDescricao.forEach((botao, index) => {
-    botao.addEventListener("click", () => {
-
-        abaAberta.forEach(aba => aba.style.display = "none");
-        abaAberta[index].style.display = "grid";
-        fundoDaAba.style.display = "block";
-    });
-});
 
 //Codigo para selecionar classes e raças
 
@@ -125,14 +109,11 @@ let galeriaImagensMeioOrcs = [
 let botoesClasse = document.querySelectorAll(".botaoSelecaoClasse");
 let divDeImagens = document.querySelector("#imagem-personagem");
 
-function aplicaImagem(botao, imagens) { }
-
 botoesClasse.forEach((botao, index) => {
     botao.addEventListener("click", () => {
         let img = document.createElement("img");
         img.src = galeriaImagensClasses[index];
         divDeImagens.appendChild(img);
-
     });
 });
 //CODIGO DE ALTERAÇAO DA COR DOS OLHOS
@@ -205,12 +186,28 @@ let galeriaAtual = "cabelos";
 
 let setaDireitaPersonagem = document.querySelector("#flecha-personagem-direita");
 let setaEsquerdaPersonagem = document.querySelector("#flecha-personagem-esquerda");
+let botaoMenuDescricao = document.querySelectorAll(".personagem div");
 
 botaoMenuDescricao.forEach((botao, index) => {
     botao.addEventListener("click", () => {
         if (![14, 13, 12].includes(index)) {
             setaDireitaPersonagem.style.display = "none";
             setaEsquerdaPersonagem.style.display = "none";
+        }
+    });
+});
+
+let abaAberta = document.querySelectorAll(".itemGaleria");
+let fundoDaAba = document.querySelector(".galeriaDeSelecao");
+
+botaoMenuDescricao.forEach((botao, index) => {
+    botao.addEventListener("click", () => {
+
+        abaAberta.forEach(aba => aba.style.display = "none");
+        abaAberta[index].style.display = "grid";
+        fundoDaAba.style.display = "block";
+        if (abaAberta[index] == abaAberta[12] || abaAberta[index] == abaAberta[13] || abaAberta[index] == abaAberta[14]) {
+            abaAberta.style.display = "none";
         }
     });
 });
@@ -247,6 +244,8 @@ setaEsquerdaPersonagem.addEventListener("click", () => {
     atualizarImagem();
 });
 
+//COR DO PERSONAGEM//COR DO PERSONAGEM
+
 const coresPele = document.querySelectorAll(".cor-pele");
 let srcHumano = "imgs-ficha3/branco.png";
 
@@ -263,6 +262,8 @@ coresPele.forEach(cor => {
     atualizarImagem();
   });
 });
+
+//COR DO PERSONAGEM//COR DO PERSONAGEM//COR DO PERSONAGEM
 
 const coresOlho = document.querySelectorAll(".cor-olho");
 let srcOlhos = "imgs-ficha3/olhos/oPreto.png"
@@ -307,13 +308,4 @@ botaoAvisos.addEventListener("click", () =>{
 })
 
 //CODIGO DA SEÇAO  DE AVISOS
-
-//TITULO FICHA
-
-
-
-//COR DE PELE
-
-
-
 

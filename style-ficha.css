@@ -420,7 +420,7 @@ label {
     z-index: 4;
 }
 
-#item-pele {
+.item-pele {
     width: 15vw;
     height: 15vw;
     display: grid;
@@ -553,3 +553,6 @@ label {
     color: #ffffff;
 }
 
+#item-camisa{
+    
+}
